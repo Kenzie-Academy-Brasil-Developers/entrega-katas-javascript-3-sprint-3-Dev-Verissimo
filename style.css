@@ -1,7 +1,13 @@
+#principal {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
 #principal div:first-child{
     background-color: rgb(105, 97, 97);
 
-    width: 400px;
+    width: 300px;
     height: 200px;
 
     font-size: 30px;
@@ -11,11 +17,25 @@
 #principal div{
     background-color: aqua;
 
-    width: 400px;
+    width: 300px;
     min-height: 200px;
     margin-top: 10px;
 
     font-size: 30px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.274);
+}
+#principal div:hover{
+    animation: loading 1s linear;
+    
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.274);
+}
+@keyframes loading {
+    from {
+		transform: rotateY(0);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
 }
 article {
     width: 200px;
